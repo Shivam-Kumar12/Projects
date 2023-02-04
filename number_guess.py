@@ -1,4 +1,4 @@
-actual_number=45
+actual_number=45 
 attempt=0
 while True:
     attempt+=1
