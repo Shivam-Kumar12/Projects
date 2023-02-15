@@ -1,0 +1,8 @@
+a = int(input("Enter the Number:"))
+b = int(input("Enter the Number:"))
+print("the addition of a and b:", (a + b))
+print("the subtraction of a and b:", (a - b))
+print("the Multiplication of a and b:", (a * b))
+print("the Division of a and b:", (a / b))
+print("the Exponent of a and b:", (a ** b))
+print("the Modulo of a and b:", (a % b))
