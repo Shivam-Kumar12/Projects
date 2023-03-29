@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration form</title>
+</head>
+<script src="https://kit.fontawesome.com/27c08efff4.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style1.css">
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div class="btn" id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="Login()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="Register()">Register</button>
+            </div>
+            <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a> 
+              <a href="#"> <i class="fa-brands fa-instagram"></i></a> 
+             <a href="#"> <i class="fa-brands fa-whatsapp"></i></a>  
+            </div>
+            <form id="Login"class="input-group"><i class="fa-solid fa-user"></i>
+               <input type="text" class="input-field" placeholder="User-id" required>
+               <i class="fa-solid fa-lock"></i>
+                <input type="password" class="input-field" placeholder="Password" required>
+                <input type="checkbox"class="check-box"><span>Remember Password</span>
+                <button type="submit" class="submit">LOGIN</button>
+                <button type="submit1" class="submit1">Forgot Password</button>
+             </form>
+             <form id="Register" class="input-group"><i class="fa-solid fa-user"></i>
+                <input type="text" class="input-field" placeholder="User-id" required><i class="fa-solid fa-envelope"></i>
+                <input type="email" class="input-field" placeholder="Email-Id" required><i class="fa-solid fa-lock"></i>
+                <input type="password" class="input-field" placeholder="Password" required>
+                <input type="checkbox"class="check-box"><span>I agree to the terms & condition  </span>
+                <button type="submit" class="submit">Register</button>
+             </form>
+        </div>
+    
+    </div>
+</body>
+<script src="style1.js"></script>
+</html>

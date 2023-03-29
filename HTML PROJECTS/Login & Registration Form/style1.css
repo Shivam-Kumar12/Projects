@@ -1,0 +1,141 @@
+*{
+padding: 0;
+margin: 0;
+
+}
+.hero{
+width: 100vw;
+height: 100vh;
+background-image: linear-gradient(rgba(49, 49, 181, 0.353),rgba(49, 49, 181, 0.230)),url("pic2.avif");
+background-position: center;
+background-size: cover;
+position: absolute;
+
+}
+.form-box{
+ 
+width: 370px;
+height: 480px;
+position: relative;
+margin: 6% auto;
+background: #fff;
+padding: 5px;
+overflow: hidden;
+border-radius: 20px;
+opacity:0.88;
+}
+.button-box{
+    width: 220px;
+    margin: 37px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px dodgerblue;
+    border-radius:30px;
+}
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+  
+   
+}
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right,#ff105f,#ffad06);
+     border-radius: 30px;
+     transition: .5s;
+}
+.social-icons{
+position: relative;
+  padding-left: 10px;
+   font-size: 22px;
+   cursor: pointer;
+   color: dodgerblue;
+   /* box-shadow: 0 0 20px 9px dodgerblue; */
+   border-radius: 30px;
+   width: 180px;
+   left: 95px;
+}
+.social-icons i{
+    padding-left: 25px;
+}
+.input-group{
+top: 180px;
+position: absolute;
+width: 280px;
+transition: .5s;
+padding: 5px;
+}
+.input-field{
+width: 100%;
+padding: 10px 0;
+margin: 5px 0;
+border-top: 0px;
+border-left:0px;
+border-right: 0px;
+border-bottom: 1px solid #999;
+outline: none;
+background: transparent;
+text-decoration: none;
+}
+.submit{
+    width: 75%;
+    padding: 10px 40px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: dodgerblue;
+    border-radius: 34px;
+    margin: 40px;
+}
+span{
+    top: 20px;
+    position: relative;
+    left: 12px;
+    text-decoration: underline;
+}
+.check-box{
+ top: 22px;
+ position: relative;
+ 
+}
+#Login{
+    left: 50px;
+}
+#Register{
+    left: 450px;
+}
+.submit1{
+    width: 85%;
+    
+    margin-left: 28px;
+    height: 25px;
+    cursor: pointer;
+    display: block;
+   
+}
+.fa-user{
+    position: relative;
+    top: 35px;
+    right: 28px;
+    font-size: 20px;
+    
+}
+.fa-lock{
+    position: relative;
+    top: 35px;
+    right: 28px;
+    font-size: 20px;
+}
+.fa-envelope{
+    position: relative;
+    top: 35px;
+    right: 28px;
+    font-size: 20px;
+}
