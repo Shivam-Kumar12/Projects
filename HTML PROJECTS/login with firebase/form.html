@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="form.css"  />
+  <title>Document</title>
+</head>
+<body>
+  <!-- Animated Wave Background  -->
+  <div class="ocean">
+      <div class="wave"></div>
+      <div class="wave"></div>
+  </div>
+  <!-- Log In Form Section -->
+  <section>
+      <div class="container" id="container">
+          <div class="form-container sign-up-container">
+              <form action="#">
+                  <h1>Sign Up</h1>
+                  <div class="social-container">
+                      <a href="https://Github.com/YasinDehfuli" target="_blank" class="social"><i class="fab fa-github"></i></a>
+                      <a href="https://Codepen.io/YasinDehfuli" target="_blank" class="social"><i class="fab fa-codepen"></i></a>
+                      <a href="mailto:Ydehfuli@gmail.com" target="_blank" class="social"><i class="fab fa-google"></i></a>
+                  </div>
+                  <span>Or use your Email for registration</span>
+                  <label>
+                      <input type="text" placeholder="Name"/>
+                  </label>
+                  <label>
+                      <input id="emailsp" type="email" placeholder="Email"/>
+                  </label>
+                  <label>
+                      <input id="passsp" type="password" placeholder="Password"/>
+                  </label>
+                  <button id="signupBtn" style="margin-top: 9px">Sign Up</button>
+              </form>
+          </div>
+          <div class="form-container sign-in-container">
+              <form action="#">
+                  <h1>Sign in</h1>
+                  <div class="social-container">
+                      <a href="https://Github.com/YasinDehfuli" target="_blank" class="social"><i class="fab fa-github"></i></a>
+                      <a href="https://Codepen.io/YasinDehfuli" target="_blank" class="social"><i class="fab fa-codepen"></i></a>
+                      <a href="mailto:Ydehfuli@gmail.com" target="_blank" class="social"><i class="fab fa-google"></i></a>
+                  </div>
+                  <span> Or sign in using E-Mail Address</span>
+                  <label>
+                      <input id="emaillp" type="email" placeholder="Email"/>
+                  </label>
+                  <label>
+                      <input id="passlp" type="password" placeholder="Password"/>
+                  </label>
+                  <a href="#">Forgot your password?</a>
+                  <button id="signinBtn">Sign In</button>
+              </form>
+          </div>
+          <div class="overlay-container">
+              <div class="overlay">
+                  <div class="overlay-panel overlay-left">
+                      <h1>Log in</h1>
+                      <p>Sign in here if you already have an account </p>
+                      <button class="ghost mt-5" id="signIn">Sign In</button>
+                  </div>
+                  <div class="overlay-panel overlay-right">
+                      <h1>Create, Account!</h1>
+                      <p>Sign up if you still don't have an account ... </p>
+                      <button class="ghost" id="signUp">Sign Up</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+  <script  type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js';
+const firebaseConfig = {
+    apiKey: "AIzaSyDhIAig2Pp3cAhhd-gKjMli_IswuAmpOew",
+    authDomain: "login-d3228.firebaseapp.com",
+    projectId: "login-d3228",
+    storageBucket: "login-d3228.appspot.com",
+    messagingSenderId: "168543948536",
+    appId: "1:168543948536:web:4355385c9f90216c16350d",
+    measurementId: "G-RT83Q1RYNE"
+  };
+
+  // Initialize Firebase
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () =>
+    container.classList.add('right-panel-active'));
+
+signInButton.addEventListener('click', () =>
+    container.classList.remove('right-panel-active'));
+
+const signInBtn = document.getElementById('signinBtn')
+const signUpBtn = document.getElementById('signupBtn')
+const emaillp = document.getElementById('emaillp')
+const passlp = document.getElementById('passlp')
+const emailsp = document.getElementById('emailsp')
+const passsp = document.getElementById('passsp')
+
+signUpBtn.addEventListener('click',()=>{
+  createUserWithEmailAndPassword(auth, emailsp.value, passsp.value)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    console.log(user)
+    alert('Account Created Successfully Successfully')
+  })
+  .catch((error) => {
+    console.log(error)
+    alert(error.message)
+  });
+})
+
+signInBtn.addEventListener('click',()=>{
+  signInWithEmailAndPassword(auth, emaillp.value, passlp.value)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    console.log(user)
+    alert('Signned In Successfully')
+  })
+  .catch((error) => {
+    console.log(error)
+    alert(error.message)
+  });
+})
+  </script>
+  </body>
+  
+  <!-- https://Github.com/YasinDehfuli
+     https://Codepen.io/YasinDehfuli
+     -->
+</html>
