@@ -1,0 +1,129 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --lg-lightcolor:linear-gradient(to left,rgba(116,235,213,0.6),rgba(159,172,230,0.6))
+}
+body{
+    background-image:var(--lg-lightcolor), url('https://e0.pxfuel.com/wallpapers/197/304/desktop-wallpaper-3d-abstract-aero-blue-leaf-ipad-iphone.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+
+}
+.container{
+    background-color: aliceblue;
+    border-radius: 10px;
+    -webkit-border-radius:10px;
+    box-shadow: 0.2.8px 2.2px rgba(0, 0, 0, 0.034),0 6.7px 5.3px rgba(0, 0, 0, 0.048) 0 12.cap;
+    overflow: hidden;
+    width: 40vw;
+    max-width: 100%;
+}
+.header{
+    background: var(--lg-lightcolor);
+    padding: 30px;
+}
+.header h2{
+    color: #222;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.form .btn{
+    background: var(--lg-lightcolor);
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    color: #000;
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    padding: 15px 0;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 1s ease-in-out;
+    
+}
+.form{
+    padding: 25px;
+    overflow: hidden;
+}
+.form-control{
+    margin-bottom: 20px;
+    position: relative;
+}
+.form-control label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.form-control input{
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    border: 2px solid #f0f0f0;
+    font-size: 14px;
+    padding: 12px ;
+}
+.form-control input:focus{
+    outline: 0;
+    border-color: #000;
+}
+.form-control.success input{
+    border-color: #2ecc71;
+}
+.form-control.error input{
+    border-color: #e74c3c;
+}
+.form-control small{
+    visibility: hidden;
+    color: #e74c3c;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.form-control.error small{
+    visibility: visible;
+    position: relative;
+
+}
+.form-control i{
+    position: absolute;
+    right: 12px;
+    top: 38px;
+    visibility: hidden;
+}
+.form-control.success i.fa-circle-check{
+    color:  #2ecc71;
+    visibility: visible;
+}
+.form-control.error i.fa-circle-exclamation{
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.form .btn:hover{
+    background: linear-gradient(to right,#74ebd5,#9face6);
+    cursor: pointer;
+
+}
+@media(max-width:998px){
+    .container{
+        width: 60vw;
+        max-width: 100%;
+        overflow: hidden;
+        max-height:99vh;
+    }
+} 
+
