@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OTP Verification</title>
+</head>
+<body>
+  <form>
+    <label for="phone">Phone number:</label>
+    <input type="text" id="phone" name="phone">
+    <br>
+    <button type="button" onclick="sendOTP()">Send OTP</button>
+    <br>
+    <label for="otp">OTP:</label>
+    <input type="text" id="otp" name="otp">
+    <br>
+    <button type="button" onclick="verifyOTP()">Verify OTP</button>
+  </form>
+
+  <script>
+    let otp = '';
+    let phoneInput = document.getElementById('phone');
+ const otpInput = document.getElementById('otp');
+    let phone = phoneInput.value;
+    function generateOTP(length) {
+      const chars = '0123456789';
+      let result = '';
+      for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * chars.length);
+        result += chars[randomIndex];
+      }
+      return result;
+    }
+
+    function sendOTP() {
+      // Get the phone number input
+     
+      
+
+      // Generate a 6-digit OTP
+      otp = generateOTP(6);
+
+      // TODO: Send the OTP to the user's phone number using an SMS service provider
+      window.localStorage.setItem('otp', otp);
+      console.log(`OTP sent to ${phone}: ${otp}`);
+    }
+
+    function verifyOTP() {
+      // Get the OTP input
+      
+      const localOtp= window.localStorage.getItem('otp');
+
+      // TODO: Verify the OTP entered by the user
+
+      // Generate a 6-digit OTP for testing purposes
+      console.log(localOtp + 'dsfesfe'+otp)
+console.log(otp.toString() == otpInput.value)
+      if (otp == otpInput.value) {
+        alert('OTP verification successful');
+      } else {
+        alert('OTP verification failed');
+      }
+    }
+  </script>
+</body>
+</html>
