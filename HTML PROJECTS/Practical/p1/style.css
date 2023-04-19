@@ -1,0 +1,44 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.profile {
+    border: 2px solid #dddddd;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    display: inline-block;
+    border-radius: 12px;
+}
+table {
+    border-collapse: collapse;
+    width: auto;
+    margin: 0 auto;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+th {
+    background-color: #dddddd;
+}
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+    font-size: 24px;
+    color: #444444;
+}
+.social-icons a:hover {
+    color: #000000;
+}
+.profile h1{
+    text-align: center;
+}
